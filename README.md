@@ -1,11 +1,11 @@
-Demo homework for RS School Machine Learning course.
+Final Project in Evaluation Selection of RS School Machine Learning course.
 
-This demo uses [Forest Cover Type Prediction](https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset) dataset.
+This Priject uses [Forest Cover Type Prediction](https://www.kaggle.com/competitions/forest-cover-type-prediction) dataset.
 
 ## Usage
 This package allows you to train model for detecting the presence of heart disease in the patient.
 1. Clone this repository to your machine.
-2. Download [Heart Disease](https://www.kaggle.com/competitions/forest-cover-type-prediction) dataset, save csv locally (default path is *data/heart.csv* in repository's root).
+2. Download [Forest Cover Type Prediction](https://www.kaggle.com/competitions/forest-cover-type-prediction) dataset, save csv locally (default path is *data/heart.csv* in repository's root).
 3. Make sure Python 3.9 and [Poetry](https://python-poetry.org/docs/) are installed on your machine (I use Poetry 1.1.11).
 4. Install the project dependencies (*run this and following commands in a terminal, from the root of a cloned repository*):
 ```sh
@@ -45,3 +45,13 @@ Format your code with [black](https://github.com/psf/black) by using either nox 
 nox -[r]s black
 poetry run black src tests noxfile.py
 ```
+
+The intermediate results of the model training are as follows:
+
+https://www.kaggle.com/competitions/forest-cover-type-prediction/submissions
+
+
+
+
+
+
