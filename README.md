@@ -53,7 +53,7 @@ nox -[r]s black
 poetry run black src tests noxfile.py
 ```
 
-The intermediate results of the model training are as follows:
+The intermediate results of the model training of Leonid Kurch are as follows:
 
 https://www.kaggle.com/competitions/forest-cover-type-prediction/submissions
 
