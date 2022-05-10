@@ -3,7 +3,14 @@ Final Project in Evaluation Selection of RS School Machine Learning course.
 This Priject uses [Forest Cover Type Prediction](https://www.kaggle.com/competitions/forest-cover-type-prediction) dataset.
 
 ## Usage
-This package allows you to train model for detecting the presence of heart disease in the patient.
+This package allows you to train model for predicting the forest cover type (the predominant kind of tree cover)
+from strictly cartographic variables (as opposed to remotely sensed data). The actual forest cover type for a given 30 x 30 meter cell
+was determined from US Forest Service (USFS) Region 2 Resource Information System data.
+Independent variables were then derived from data obtained from the US Geological Survey and USFS.
+The data is in raw form (not scaled) and contains binary columns of data for qualitative independent variables such as wilderness areas and soil type.
+
+
+
 1. Clone this repository to your machine.
 2. Download [Forest Cover Type Prediction](https://www.kaggle.com/competitions/forest-cover-type-prediction) dataset, save csv locally (default path is *data/heart.csv* in repository's root).
 3. Make sure Python 3.9 and [Poetry](https://python-poetry.org/docs/) are installed on your machine (I use Poetry 1.1.11).
