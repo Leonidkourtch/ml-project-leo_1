@@ -48,9 +48,10 @@ for train_ix, test_ix in cv_outer.split(get_dataset()):
 
 	# define search
 	search = GridSearchCV(model, space, scoring='accuracy', cv=cv_inner, refit=True)
-    
+
 	# execute search
 	result = search.fit(X_train, y_train)
+    
 	# get the best performing model fit on the whole training set
 	best_model = result.best_estimator_
 	# evaluate model on the hold out dataset
