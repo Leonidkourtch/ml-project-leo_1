@@ -79,8 +79,9 @@ def train(
         mlflow.log_param("use_scaler", use_scaler)
         mlflow.log_param("max_iter", max_iter)
         mlflow.log_param("logreg_c", logreg_c)
-        #mlflow.log_metric("accuracy", accuracy)
+        mlflow.log_metric("accuracy", accuracy)
         mlflow.log_metric("f1", accuracy1)
+        
         #click.echo(f"Accuracy: {accuracy}.")
         click.echo(f"f1: {accuracy1}.")
         dump(pipeline, save_model_path)
