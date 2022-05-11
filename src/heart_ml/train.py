@@ -73,14 +73,15 @@ def train(
     with mlflow.start_run():
         pipeline = create_pipeline(use_scaler, max_iter, logreg_c, random_state)
         pipeline.fit(features_train, target_train)
-        #accuracy = accuracy_score(target_val, pipeline.predict(features_val))
+        accuracy = accuracy_score(target_val, pipeline.predict(features_val))
         accuracy1 = f1_score(target_val, pipeline.predict(features_val))
+
         mlflow.log_param("use_scaler", use_scaler)
         mlflow.log_param("max_iter", max_iter)
         mlflow.log_param("logreg_c", logreg_c)
         #mlflow.log_metric("accuracy", accuracy)
         mlflow.log_metric("f1", accuracy1)
-        click.echo(f"Accuracy: {accuracy}.")
+        #click.echo(f"Accuracy: {accuracy}.")
         click.echo(f"f1: {accuracy1}.")
         dump(pipeline, save_model_path)
         click.echo(f"Model is saved to {save_model_path}.")
