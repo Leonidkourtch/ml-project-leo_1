@@ -51,12 +51,15 @@ for train_ix, test_ix in cv_outer.split(get_dataset()):
 
 	# execute search
 	result = search.fit(X_train, y_train)
-    
+
 	# get the best performing model fit on the whole training set
 	best_model = result.best_estimator_
+
 	# evaluate model on the hold out dataset
 	yhat = best_model.predict(X_test)
+
 	# evaluate the model
 	acc = accuracy_score(y_test, yhat)
+
 	# store the result
 	outer_results.append(acc)
