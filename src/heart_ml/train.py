@@ -4,7 +4,8 @@ from joblib import dump
 import click
 import mlflow
 import mlflow.sklearn
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
+
 
 from .data import get_dataset
 from .pipeline import create_pipeline
