@@ -55,7 +55,7 @@ poetry run black src tests noxfile.py
 
 Different train Score:
 
- http://127.0.0.1:5000
+http://127.0.0.1:5000
 
 The intermediate results of the model training of Leonid Kurch are as follows:
 
