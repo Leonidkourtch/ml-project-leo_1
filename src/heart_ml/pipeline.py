@@ -4,8 +4,6 @@ from sklearn import tree
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
-clf = tree.DecisionTreeClassifier()
-
 
 def create_pipeline(
     use_scaler: bool, max_iter: int, logreg_C: float, random_state: int
@@ -18,8 +16,8 @@ def create_pipeline(
             "classifier",
             LogisticRegression(
                 random_state=random_state, max_iter=max_iter, C=logreg_C
-                             
-            ),
+                              ),
+            tree.DecisionTreeClassifier()
         )
     )
     return Pipeline(steps=pipeline_steps)
