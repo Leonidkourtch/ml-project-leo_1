@@ -57,7 +57,7 @@ Different train Score:
 
 http://127.0.0.1:5000
 
-The intermediate results of the model training of Leonid Kurch are as follows:
+The intermediate results of the model training on Kaggle are as follows:
 
 https://www.kaggle.com/competitions/forest-cover-type-prediction/submissions
 
