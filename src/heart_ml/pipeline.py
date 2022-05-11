@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 def create_pipeline(
-    use_scaler: bool, max_iter: int, logreg_C: float, random_state: int, max_depth: int,
+    use_scaler: bool, max_iter: int, logreg_C: float, random_state: int, max_depth: int, min_samples_split:int or float
 ) -> Pipeline:
     pipeline_steps = []
     if use_scaler:
@@ -17,7 +17,8 @@ def create_pipeline(
             LogisticRegression(
                 random_state=random_state, max_iter=max_iter, C=logreg_C
                               ),
-            tree.DecisionTreeClassifier()
+            tree.DecisionTreeClassifier(max_depth=max_depth, min_samples_split=min_samples_split
+                                        )
         )
     )
     return Pipeline(steps=pipeline_steps)
