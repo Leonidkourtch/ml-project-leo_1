@@ -29,7 +29,6 @@ def get_dataset(
 
 # configure the cross-validation procedure
 cv_outer = KFold(n_splits=10, shuffle=True, random_state=1)
-# enumerate splits
 outer_results = list()
 for train_ix, test_ix in cv_outer.split(get_dataset()):
     # split data
