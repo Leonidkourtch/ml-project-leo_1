@@ -76,7 +76,6 @@ def train(
         accuracy = accuracy_score(target_val, pipeline.predict(features_val))
         accuracy1 = f1_score(target_val, pipeline.predict(features_val))
         accuracy2 = roc_auc_score(target_val, pipeline.predict(features_val))
-
         mlflow.log_param("use_scaler", use_scaler)
         mlflow.log_param("max_iter", max_iter)
         mlflow.log_param("logreg_c", logreg_c)
