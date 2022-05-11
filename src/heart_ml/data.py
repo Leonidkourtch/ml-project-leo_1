@@ -40,11 +40,12 @@ for train_ix, test_ix in cv_outer.split(get_dataset()):
 
 	# define the model
 	model = RandomForestClassifier(random_state=1)
-    
+
 	# define search space
 	space = dict()
 	space['n_estimators'] = [10, 100, 500]
 	space['max_features'] = [2, 4, 6]
+    
 	# define search
 	search = GridSearchCV(model, space, scoring='accuracy', cv=cv_inner, refit=True)
 	# execute search
