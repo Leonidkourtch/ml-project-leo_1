@@ -14,6 +14,7 @@ def create_pipeline(
             "classifier",
             LogisticRegression(
                 random_state=random_state, max_iter=max_iter, C=logreg_C
+
             ),
         )
     )
