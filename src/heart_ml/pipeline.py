@@ -10,6 +10,7 @@ def create_pipeline(
     if use_scaler:
         pipeline_steps.append(("scaler", StandardScaler()))
     pipeline_steps.append(
+        
         (
             "classifier",
             LogisticRegression(
