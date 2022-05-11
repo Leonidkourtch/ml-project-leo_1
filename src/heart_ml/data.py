@@ -34,9 +34,10 @@ for train_ix, test_ix in cv_outer.split(get_dataset()):
     # split data
 	X_train, X_test = get_dataset()[train_ix, :], get_dataset()[test_ix, :]
 	y_train, y_test = get_dataset()[train_ix], get_dataset()[test_ix]
-    
+
 	# configure the cross-validation procedure
 	cv_inner = KFold(n_splits=3, shuffle=True, random_state=1)
+    
 	# define the model
 	model = RandomForestClassifier(random_state=1)
 	# define search space
